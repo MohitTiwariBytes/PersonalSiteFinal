@@ -1,0 +1,152 @@
+.main-navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1112px;
+}
+
+.logo h1 {
+  font-family: "Monument Extended";
+  font-size: 28px;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+}
+
+.resdsx {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 16px;
+  overflow: hidden;
+  font-family: "Nohemi";
+}
+
+.sdj {
+  display: flex;
+  flex-direction: row;
+}
+
+.sdf {
+  display: flex;
+  flex-direction: row;
+}
+
+.contactButton button {
+  padding: 14px;
+  border-radius: 150px;
+  border: 1px solid black;
+  background: rgb(248, 247, 247);
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contactButton button:hover svg {
+  transform: rotate(-34deg);
+}
+
+button svg {
+  width: 25px;
+  height: 25px;
+  transition: all 0.3s ease;
+}
+
+.hamButton {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 25px;
+  top: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  z-index: 100001;
+}
+
+.line1,
+.line2 {
+  height: 2px;
+  width: 100%;
+  background: black;
+  border-radius: 23px;
+  transition: all 0.2s ease;
+}
+
+.ham-menu {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  flex-direction: column;
+}
+
+.ham-menu a {
+  text-decoration: none;
+  color: white;
+  font-family: "Nohemi";
+}
+
+.lolidk {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ham-menu a h1 {
+  font-size: 12.2vw; /*12.2vw*/
+}
+
+.hsaho {
+  overflow: hidden;
+}
+
+.hsaho h1 {
+  position: relative;
+}
+
+@media (max-width: 729px) {
+  .navigation {
+    display: none;
+  }
+
+  .hamButton {
+    display: flex;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+  }
+
+  .ham-menu {
+    display: flex;
+  }
+}

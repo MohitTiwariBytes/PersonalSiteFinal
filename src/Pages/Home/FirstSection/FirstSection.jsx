@@ -120,25 +120,6 @@ const FirstSection = () => {
             Student · Gamer · Developer · Designer · Student · Gamer · Developer
             · Developer · Designer · Student · Gamer · Developer · Designer ·
             Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · ·
           </marquee>
           <marquee
             behavior="scroll"
@@ -163,18 +144,6 @@ const FirstSection = () => {
             · Developer · Designer · Student · Gamer · Developer · Designer ·
             Student · Gamer · Developer · Designer · Student · Gamer · Developer
             · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            ·Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            ·Developer · Designer · Student · Gamer · Developer · Designer ·
             Student · Gamer · Developer · Designer · Student · Gamer · Developer
             · Developer · Designer · Student · Gamer · Developer · Designer ·
             Student · Gamer · Developer · Designer · Student · Gamer · Developer

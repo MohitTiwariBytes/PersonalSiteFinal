@@ -15,6 +15,7 @@
   font-family: "Satoshi";
   overflow: hidden;
   position: relative;
+  font-weight: 500;
 }
 
 .left {

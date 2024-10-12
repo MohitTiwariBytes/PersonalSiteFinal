@@ -1,0 +1,109 @@
+.main-first-section-home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-section-home {
+  width: 95%;
+  max-width: 1112px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Satoshi";
+  overflow: hidden;
+  position: relative;
+}
+
+.left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+}
+
+.left h1 {
+  font-size: 35px;
+}
+
+z {
+  font-weight: 400;
+}
+
+.line-divider {
+  width: 0;
+  height: 2px;
+  background-color: black;
+}
+
+.smallTextBottom h1 {
+  font-size: 19px;
+  overflow: hidden;
+}
+
+.smallTextBottom h1 span {
+  position: relative;
+  overflow: hidden;
+}
+
+.smallTextBottom {
+  width: 50%;
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  transform: rotate(-40deg);
+  right: -200px;
+  z-index: -3;
+}
+
+.marquee marquee {
+  font-size: 27px;
+  width: 2000px;
+  background: white;
+  border: 1px solid black;
+}
+
+@media (max-width: 1137px) {
+  .first-section-home {
+    position: static;
+  }
+
+  .left {
+    position: absolute;
+    width: 90%;
+  }
+}
+
+@media (max-width: 713px) {
+  .left {
+    width: 100%;
+  }
+
+  #stagger-text {
+    font-size: 23px;
+    width: 99%;
+    content: "I design and develop visually captivating digital experiences through code.";
+  }
+
+  .smallTextBottom {
+    width: 90%;
+  }
+
+  .marquee marquee {
+    width: 1500px;
+    margin-left: -500px;
+    font-size: 25px;
+  }
+
+  .marquee {
+    margin-top: -300px;
+    transform: rotate(-50deg);
+  }
+}

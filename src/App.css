@@ -31,3 +31,8 @@ body,
   font-family: "Nohemi";
   src: url("./assets/Fonts/Nohemi-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/Fonts/Satoshi-Variable.ttf");
+}

@@ -33,6 +33,11 @@ const Intro = () => {
       duration: 0.3,
       ease: "power3.inOut",
       onComplete: () => {
+        gsap.fromTo(
+          ".main-navbar",
+          { y: -100 },
+          { y: 0, duration: 0.6, ease: "power1.inOut", delay: 0.6 }
+        );
         gsap.to(".intro", {
           opacity: 0,
           duration: 0.5,

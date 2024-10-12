@@ -18,6 +18,7 @@ const Navbar = () => {
         { height: "0%" },
         {
           height: "100%",
+          minHeight: "100vh",
           duration: 0.6,
           ease: "power3.inOut",
           onComplete: () => {
@@ -53,6 +54,7 @@ const Navbar = () => {
               { height: "100%" },
               {
                 height: "0%",
+                minHeight: "0vh",
                 duration: 0.6,
                 ease: "power3.inOut",
                 onStart: () => setPlayScramble(false), // Stop scramble when closing

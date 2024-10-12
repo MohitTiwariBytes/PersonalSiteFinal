@@ -107,3 +107,16 @@ z {
     transform: rotate(-50deg);
   }
 }
+
+@media (max-width: 707px) {
+  .marquee {
+    transform: rotate(-35deg);
+    margin-top: 200px;
+  }
+}
+
+@media (max-width: 572px) {
+  .marquee {
+    margin-top: 0px;
+  }
+}

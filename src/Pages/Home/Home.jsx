@@ -5,6 +5,7 @@ import "./Home.css";
 import Intro from "../../Components/Intro/Intro";
 import Navbar from "../../Components/Navbar/Navbar";
 import FirstSection from "./FirstSection/FirstSection";
+import SecondSection from "./SecondSection/SecondSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,7 @@ const Home = () => {
           <Navbar></Navbar>
         </div>
         <FirstSection></FirstSection>
+        <SecondSection></SecondSection>
       </div>
     </div>
   );

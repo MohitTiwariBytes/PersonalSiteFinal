@@ -3,6 +3,7 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
 .navbar {
@@ -12,10 +13,10 @@
   align-items: center;
   max-width: 1112px;
 }
-
 .logo h1 {
   font-family: "Monument Extended";
   font-size: 28px;
+  color: black;
 }
 
 .navigation {

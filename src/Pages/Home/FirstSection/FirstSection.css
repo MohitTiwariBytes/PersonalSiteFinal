@@ -72,10 +72,6 @@ z {
 }
 
 @media (max-width: 1137px) {
-  .first-section-home {
-    position: static;
-  }
-
   .left {
     position: absolute;
     width: 90%;

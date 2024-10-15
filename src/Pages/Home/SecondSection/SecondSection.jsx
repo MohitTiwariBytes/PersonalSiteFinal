@@ -44,6 +44,27 @@ const SecondSection = () => {
         },
       }
     );
+
+    gsap.fromTo(
+      ".project",
+      {
+        y: 300,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power1.inOut",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".projects",
+          start: "top 80%",
+          end: "top 20%",
+          scrub: true,
+        },
+      }
+    );
   }, []);
 
   return (

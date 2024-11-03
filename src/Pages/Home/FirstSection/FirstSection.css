@@ -8,7 +8,7 @@
 
 .first-section-home {
   width: 95%;
-  max-width: 1112px;
+  max-width: 1500px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -60,13 +60,14 @@ z {
   flex-direction: column;
   gap: 26px;
   transform: rotate(-40deg);
-  right: -200px;
+  right: -350px;
   z-index: -3;
+  top: 200px;
 }
 
-.marquee marquee {
+.asd {
   font-size: 27px;
-  width: 2000px;
+  width: 1000px;
   background: white;
   border: 1px solid black;
 }
@@ -75,6 +76,27 @@ z {
   .left {
     position: absolute;
     width: 90%;
+  }
+}
+
+@media (max-width: 842px) {
+  .marquee {
+    top: 300px;
+    left: 200px;
+  }
+}
+
+@media (max-width: 538px) {
+  .marquee {
+    top: 300px;
+    left: 150px;
+  }
+}
+
+@media (max-width: 476px) {
+  .marquee {
+    top: 350px;
+    left: 100px;
   }
 }
 
@@ -91,29 +113,5 @@ z {
 
   .smallTextBottom {
     width: 90%;
-  }
-
-  .marquee marquee {
-    width: 1500px;
-    margin-left: -500px;
-    font-size: 25px;
-  }
-
-  .marquee {
-    margin-top: -300px;
-    transform: rotate(-50deg);
-  }
-}
-
-@media (max-width: 707px) {
-  .marquee {
-    transform: rotate(-35deg);
-    margin-top: 200px;
-  }
-}
-
-@media (max-width: 572px) {
-  .marquee {
-    margin-top: 0px;
   }
 }

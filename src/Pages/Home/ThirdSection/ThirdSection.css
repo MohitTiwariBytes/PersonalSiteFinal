@@ -1,0 +1,50 @@
+.main-third-section {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.thirdSection {
+  height: 100%;
+  width: 95%;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left1 span {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-size: 33px;
+  font-family: "Satoshi";
+  font-weight: 500;
+}
+
+.left1 {
+  width: 1000px;
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  height: 0px;
+  overflow: hidden;
+}
+
+.image img {
+  border-radius: 13px;
+  object-fit: cover;
+  height: 400px;
+  width: 350px;
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import "./FirstSection.css";
+import Marquee from "react-fast-marquee";
 
 const FirstSection = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 575);
@@ -90,64 +91,14 @@ const FirstSection = () => {
           </div>
         </div>
         <div className="marquee">
-          <marquee
-            behavior="scroll"
-            direction="left"
-            scrollamount="10"
-            loop="infinite"
-          >
-            Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-          </marquee>
-          <marquee
-            behavior="scroll"
-            direction="right"
-            scrollamount="10"
-            loop="infinite"
-          >
-            Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            ·Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-            · Developer · Designer · Student · Gamer · Developer · Designer ·
-            Student · Gamer · Developer · Designer · Student · Gamer · Developer
-          </marquee>
+          <Marquee className="asd" direction="left">
+            Developer • Designer • Gamer • Developer • Designer • Gamer •
+            Developer • Designer • Gamer • Developer • Designer • Gamer
+          </Marquee>
+          <Marquee className="asd" direction="right">
+            Developer • Designer • Gamer • Developer • Designer • Gamer •
+            Developer • Designer • Gamer • Developer • Designer • Gamer
+          </Marquee>
         </div>
       </div>
     </div>

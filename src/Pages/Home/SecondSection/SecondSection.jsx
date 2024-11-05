@@ -6,7 +6,7 @@ import foodzyLogo from "../../../assets/Images/foodzyLogo-BZPrcbGz.png";
 import hackClubFinder from "../../../assets/Images/icon-rounded.svg";
 import astrohacksLogo from "../../../assets/Images/astrohacksHeadLogo.jpg";
 
-https: gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const SecondSection = () => {
   useEffect(() => {

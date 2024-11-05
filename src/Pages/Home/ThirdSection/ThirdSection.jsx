@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./ThirdSection.css";
 import myImage from "../../../assets/Images/IMG_1098.jpg";
+import Button from "../../../Components/ButtonAnimated/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,14 +14,14 @@ export default function ThirdSection() {
     gsap.fromTo(
       ".image",
       {
-        height: "0px",
+        top: "0px",
       },
       {
-        height: "400px",
+        top: "-50px",
         ease: "power3.inOut",
         duration: 0.7,
         scrollTrigger: {
-          trigger: ".thirdSection",
+          trigger: ".image",
           start: "top 80%", // Adjusted to start when the top of the section is near the bottom of the viewport
           end: "bottom bottom", // This defines the endpoint for the animation
           scrub: true, // Allows the animation to be smooth with scroll
@@ -74,6 +75,7 @@ export default function ThirdSection() {
               <p> Nothing</p>
               <p> Less.</p>
             </span>
+            <Button text={"About Me?"}></Button>
           </div>
           <div className="image">
             <img src={myImage} alt="" />

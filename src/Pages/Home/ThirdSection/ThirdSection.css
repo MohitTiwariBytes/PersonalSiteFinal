@@ -26,6 +26,9 @@
 
 .left1 {
   width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .about {
@@ -38,8 +41,10 @@
 }
 
 .image {
-  height: 0px;
+  height: 400px;
+  width: 400px;
   overflow: hidden;
+  position: relative;
 }
 
 .image img {
@@ -47,4 +52,5 @@
   object-fit: cover;
   height: 400px;
   width: 350px;
+  position: absolute;
 }

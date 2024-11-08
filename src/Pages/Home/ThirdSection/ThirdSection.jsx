@@ -48,6 +48,22 @@ export default function ThirdSection() {
         }
       );
     });
+
+    gsap.fromTo(
+      ".button",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 0.5,
+        ease: "power2.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".button ",
+          start: "top 70%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
   }, []);
 
   return (
@@ -75,7 +91,13 @@ export default function ThirdSection() {
               <p> Nothing</p>
               <p> Less.</p>
             </span>
-            <Button text={"About Me?"}></Button>
+            <Button
+              text="About Me?"
+              buttonColor="black"
+              buttonHoverColor="white"
+              textColor="#fff"
+              textHoverColor="black"
+            />
           </div>
           <div className="image">
             <img src={myImage} alt="" />

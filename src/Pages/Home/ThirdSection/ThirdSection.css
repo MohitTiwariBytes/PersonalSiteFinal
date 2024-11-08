@@ -43,7 +43,6 @@
 .image {
   height: 400px;
   width: 400px;
-  overflow: hidden;
   position: relative;
 }
 
@@ -53,4 +52,26 @@
   height: 400px;
   width: 350px;
   position: absolute;
+}
+
+@media (max-width: 1200px) {
+  .image {
+    display: none;
+  }
+
+  .about {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .left1 span {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 544px) {
+  .left1 span {
+    font-size: 18px;
+  }
 }

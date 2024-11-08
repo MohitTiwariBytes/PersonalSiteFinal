@@ -18,9 +18,9 @@ const Intro = () => {
     const timer = setTimeout(() => {
       setProgress(100);
       gsap.to(".intro-main", {
-        height: "0%",
-        duration: 1, // Adjust duration as needed
-        ease: "power4.inOut",
+        top: "-100%",
+        duration: 1.2, // Adjust duration as needed
+        ease: "power3.inOut",
       });
       gsap.to(".intro", {
         opacity: 0,
@@ -52,7 +52,6 @@ const Intro = () => {
       width: `${progress}%`,
       duration: 1,
       ease: "power3.inOut",
-      
     });
   }, [progress]);
 

@@ -1,0 +1,112 @@
+.main-first-section-about {
+  height: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.firstSectionAbout {
+  width: 95%;
+  height: 100%;
+  max-width: 1500px;
+  position: relative;
+}
+
+.topLeftAbout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.topLeftAbout h1 {
+  font-size: 150px;
+  font-family: "Satoshi";
+  font-weight: 400;
+}
+
+#adiadnc {
+  font-weight: 800;
+}
+
+.asdasdf {
+  font-family: "Satoshi";
+  font-weight: 500;
+  position: relative;
+  width: 700px !important;
+  color: rgb(78, 78, 78);
+  overflow: hidden;
+}
+
+.topLeftAbout span {
+  font-family: "Satoshi";
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(43, 43, 43);
+  width: 50%;
+}
+
+.asdas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.mainImageRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: -150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 50px;
+  left: 0;
+  top: 0;
+}
+
+.mainImageRight img {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.asdadasdnx {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: auto;
+}
+
+@media (max-width: 1004px) {
+  .topLeftAbout span {
+    width: 80%;
+  }
+}
+
+@media (max-width: 604px) {
+  .topLeftAbout span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 772px) {
+  .topLeftAbout h1 {
+    font-size: 18vw;
+  }
+}
+
+@media (max-width: 1272px) {
+  .mainImageRight {
+    display: none;
+  }
+}
+
+@media (max-width: 828px) {
+  .asdasdf {
+    width: 80% !important;
+  }
+}

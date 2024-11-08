@@ -51,7 +51,7 @@
   object-fit: cover;
   height: 400px;
   width: 350px;
-  position: absolute;
+  object-position: 0px -23px;
 }
 
 @media (max-width: 1200px) {

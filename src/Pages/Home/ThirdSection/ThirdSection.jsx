@@ -12,20 +12,19 @@ export default function ThirdSection() {
     const paragraphs = document.querySelectorAll(".about p");
 
     gsap.fromTo(
-      ".image",
+      "#imaads",
       {
-        top: "0px",
+        objectPosition: "0px -23px",
       },
       {
-        top: "-50px",
+        objectPosition: "0px -60px",
         ease: "power3.inOut",
         duration: 0.7,
         scrollTrigger: {
-          trigger: ".image",
+          trigger: ".thirdSection",
           start: "top 80%", // Adjusted to start when the top of the section is near the bottom of the viewport
-          end: "bottom bottom", // This defines the endpoint for the animation
+          end: "bottom 100%", // This defines the endpoint for the animation
           scrub: true, // Allows the animation to be smooth with scroll
-          toggleActions: "play none none none",
         },
       }
     );
@@ -100,7 +99,7 @@ export default function ThirdSection() {
             />
           </div>
           <div className="image">
-            <img src={myImage} alt="" />
+            <img id="imaads" src={myImage} alt="" />
           </div>
         </div>
       </div>

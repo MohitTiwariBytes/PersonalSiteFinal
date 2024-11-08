@@ -15,11 +15,11 @@ const Navbar = () => {
     if (isOpen) {
       gsap.fromTo(
         ".ham-menu",
-        { height: "0%" },
+        { top: "-100%" },
         {
-          height: "100%",
+          top: "0%",
           minHeight: "100vh",
-          duration: 0.6,
+          duration: 1.2,
           ease: "power3.inOut",
           onComplete: () => {
             setPlayScramble(true);
@@ -51,11 +51,11 @@ const Navbar = () => {
           onComplete: () => {
             gsap.fromTo(
               ".ham-menu",
-              { height: "100%" },
+              { top: "0%" },
               {
-                height: "0%",
+                top: "-100%",
                 minHeight: "0vh",
-                duration: 0.6,
+                duration: 1.2,
                 ease: "power3.inOut",
                 onStart: () => setPlayScramble(false), // Stop scramble when closing
               }

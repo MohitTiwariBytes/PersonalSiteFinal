@@ -1,6 +1,6 @@
 .footerMain {
   width: 100%;
-  height: 90%;
+  height: 82%;
   background-color: rgb(19, 19, 19);
   display: flex;
   justify-content: center;
@@ -19,6 +19,14 @@
   height: 75%;
   display: flex;
   flex-direction: row;
+}
+
+#asdsasds span {
+  position: relative;
+}
+
+#asdsasds {
+  overflow: hidden;
 }
 
 .bottom {

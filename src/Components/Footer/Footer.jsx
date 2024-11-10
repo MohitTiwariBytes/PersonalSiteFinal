@@ -11,6 +11,24 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Footer() {
   useEffect(() => {
     gsap.fromTo(
+      "#asdsasds span",
+      {
+        top: "400px",
+      },
+      {
+        top: "0px",
+        ease: "power4.out",
+        duration: 1,
+        stagger: 0.02,
+        scrollTrigger: {
+          trigger: ".top",
+          start: "top 80%",
+          once: true,
+          markers: false,
+        },
+      }
+    );
+    gsap.fromTo(
       "#adjp span",
       {
         top: "400px",
@@ -28,6 +46,24 @@ export default function Footer() {
         },
       }
     );
+    gsap.fromTo(
+      ".navigationFooter a",
+      {
+        opacity: "0",
+      },
+      {
+        opacity: "1",
+        ease: "power4.out",
+        duration: 1,
+        stagger: 0.06,
+        scrollTrigger: {
+          trigger: ".navigationFooter",
+          start: "top 80%",
+          once: true,
+          markers: false,
+        },
+      }
+    );
   }, []);
 
   useEffect(() => {}, []);
@@ -37,13 +73,19 @@ export default function Footer() {
       <div className="footer">
         <div className="top">
           <div className="leftFooter">
-            <h1 id="asdsasds">Wanna work with me? Let's get in touch!</h1>
+            <h1 id="asdsasds">
+              <span>Wanna</span> <span>work</span> <span>with</span>{" "}
+              <span>me?</span> <span>Let's</span> <span>get</span>{" "}
+              <span>in</span> <span>touch!</span>
+            </h1>
             <Button
               text="Let's Talk!"
               buttonColor="white"
               buttonHoverColor="gray"
               textColor="black"
-              textHoverColor="white"
+              onClick={() => {
+                window.location.replace("/contact");
+              }}
             />
           </div>
           <div className="rightFooter">

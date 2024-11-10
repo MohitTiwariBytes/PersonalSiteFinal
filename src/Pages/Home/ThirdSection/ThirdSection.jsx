@@ -96,6 +96,9 @@ export default function ThirdSection() {
               buttonHoverColor="white"
               textColor="#fff"
               textHoverColor="black"
+              onClick={() => {
+                window.location.replace("/about");
+              }}
             />
           </div>
           <div className="image">

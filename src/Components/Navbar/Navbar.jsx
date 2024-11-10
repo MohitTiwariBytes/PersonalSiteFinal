@@ -245,7 +245,7 @@ const Navbar = () => {
           <div className="contactButton">
             <button
               onClick={() => {
-                window.location.replace("mailto:mohittiwariis97@gmail.com");
+                window.location.replace("/contact");
               }}
             >
               Let's Talk{" "}

@@ -1,0 +1,108 @@
+.main-first-section-contact {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.firstSectionContact {
+  width: 95%;
+  height: 100%;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.aids {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Satoshi";
+  font-size: 50px;
+  flex-direction: column;
+}
+
+#sdasc {
+  font-size: 23px;
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+#sdasc span {
+  position: relative;
+}
+
+.aixms {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.aixms a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-family: "Nohemi";
+}
+
+.aixms a:hover {
+  text-decoration: underline;
+}
+
+#ruzds {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#ruzds span {
+  position: relative;
+}
+
+@media (max-width: 1306px) {
+  .aids {
+    width: 100%;
+    font-size: 4.2vw;
+  }
+}
+
+@media (max-width: 1054px) {
+  #ruzds {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 701px) {
+  #sdasc {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1076px) {
+  .firstSectionContact {
+    flex-direction: column;
+  }
+
+  .aixms {
+    height: 300px;
+    position: absolute;
+    height: 100%;
+    justify-content: flex-end;
+    width: 100%;
+    top: 0;
+  }
+}
+
+@media (max-width: 731px) {
+  .aixms a {
+    font-size: 20px;
+  }
+}

@@ -3,9 +3,6 @@ import gsap from "gsap";
 import "./FirstSection.css";
 import Navbar from "../../../Components/Navbar/Navbar";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import foodzyLogo from "../../../assets/Images/foodzyLogo-BZPrcbGz.png";
-import hackClubFinder from "../../../assets/Images/icon-rounded.svg";
-import astrohacksLogo from "../../../assets/Images/astrohacksHeadLogo.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,35 +11,28 @@ export default function FirstSection() {
     // Set initial position of the text for animation
     gsap.set("#ye p", { top: "200px" });
 
-    // ScrollTrigger animation for ".project" elements
+    // ScrollTrigger animation for ".ada span"
+
     gsap.fromTo(
-      ".project",
+      ".scrollEoa",
       {
-        y: 300,
-        opacity: 0,
+        scale: 0,
       },
       {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power1.inOut",
-        stagger: 0.1,
-        scrollTrigger: {
-          trigger: ".projects",
-          start: "top 80%",
-          end: "top 20%",
-          scrub: true,
-        },
+        scale: 1,
+        duration: 0.7,
+        ease: "power3.inOut",
       }
     );
 
-    // ScrollTrigger animation for ".ada span"
     gsap.fromTo(
       ".ada span",
       {
         top: 0,
+        opacity: 0,
       },
       {
+        opacity: 1,
         top: "-415px",
         duration: 1,
         ease: "power4.inOut",
@@ -63,6 +53,48 @@ export default function FirstSection() {
         },
       }
     );
+
+    // Function to update .scrollEoa position based on mouse coordinates
+    const updateScrollEoaPosition = (e) => {
+      const scrollEoa = document.querySelector(".scrollEoa");
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      // GSAP animation to move the .scrollEoa element with the mouse
+      gsap.to(scrollEoa, {
+        x: mouseX - scrollEoa.offsetWidth / 2 - 1330, // Position horizontally with the mouse
+        y: mouseY - scrollEoa.offsetHeight / 2 - 450, // Position vertically with the mouse
+        duration: 0.8, // Smooth transition to mouse position
+        ease: "power4.out", // Easing for smooth movement
+      });
+    };
+
+    // Add mousemove event listener to track the mouse position
+    document.addEventListener("mousemove", updateScrollEoaPosition);
+
+    // ScrollTrigger to control visibility of .scrollEoa based on scroll position
+    ScrollTrigger.create({
+      trigger: ".main-first-section-work", // Trigger visibility when entering this section
+      start: "top top", // When the top of the section hits the top of the viewport
+      end: "bottom top", // When the bottom of the section hits the top of the viewport
+      onEnter: () => {
+        gsap.to(".scrollEoa", { autoAlpha: 1, scale: 0 }); // Show .scrollEoa when entering section
+      },
+      onLeave: () => {
+        gsap.to(".scrollEoa", { autoAlpha: 0, scale: 1 }); // Hide .scrollEoa when leaving section
+      },
+      onEnterBack: () => {
+        gsap.to(".scrollEoa", { autoAlpha: 0, scale: 0 }); // Show again if scrolling back up
+      },
+      onLeaveBack: () => {
+        gsap.to(".scrollEoa", { autoAlpha: 1, scale: 1 }); // Hide when leaving the section upwards
+      },
+    });
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener("mousemove", updateScrollEoaPosition);
+    };
   }, []);
 
   return (
@@ -70,6 +102,9 @@ export default function FirstSection() {
       <div className="firstSectionWork">
         <div className="nav">
           <Navbar />
+        </div>
+        <div className="scrollEoa">
+          <span>Scroll Down</span>
         </div>
         <div className="sadf">
           <h1>

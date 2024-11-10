@@ -3,6 +3,8 @@
   height: 100%;
   display: flex;
   justify-content: center;
+  cursor: default;
+  overflow: hidden;
 }
 
 .firstSectionWork {
@@ -61,4 +63,33 @@ z {
   width: 100%;
   position: relative;
   min-height: 100vh;
+}
+
+.scrollEoa {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(26, 26, 26);
+  position: absolute;
+  top: 45%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Satoshi";
+  padding: 12px;
+  color: white;
+  mix-blend-mode: difference;
+  left: 80%;
+  cursor: default;
+}
+
+@media (max-width: 836px) {
+  .sadf h1 {
+    font-size: 22.2vw;
+    height: 30.2vw;
+  }
+
+  .scrollEoa {
+    display: none;
+  }
 }

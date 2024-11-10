@@ -94,6 +94,7 @@ export default function Footer() {
               <a href="/about">About</a>
               <a href="/work">Work</a>
               <a href="/contact">Contact</a>
+              <a href="https://old.mohittiwaridev.xyz">View the old site</a>
             </div>
           </div>
         </div>

@@ -47,7 +47,6 @@
 }
 
 .image img {
-  border-radius: 13px;
   object-fit: cover;
   height: 400px;
   width: 350px;

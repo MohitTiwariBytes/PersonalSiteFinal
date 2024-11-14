@@ -12,6 +12,7 @@
   "dependencies": {
     "@johnn-e/react-glitch-text": "^1.0.0",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.16",
     "matter-js": "^0.20.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

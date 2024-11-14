@@ -17,13 +17,12 @@ export default function ThirdSection() {
         objectPosition: "0px -23px",
       },
       {
-        objectPosition: "0px -60px",
+        objectPosition: "0px -120px",
         ease: "power3.inOut",
         duration: 0.7,
         scrollTrigger: {
           trigger: ".thirdSection",
-          start: "top 80%", // Adjusted to start when the top of the section is near the bottom of the viewport
-          end: "bottom 100%", // This defines the endpoint for the animation
+          start: "top 80%", // This defines the endpoint for the animation
           scrub: true, // Allows the animation to be smooth with scroll
         },
       }

@@ -124,6 +124,12 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1080px) {
+  .leftFooter h1 {
+    font-size: 47px;
+  }
+}
+
 @media (max-width: 1256px) {
   .bottom h1 {
     font-size: 8.4vw;
@@ -132,7 +138,7 @@
 
 @media (max-width: 1336px) {
   .leftFooter h1 {
-    font-size: 30px;
+    font-size: 47px;
   }
 }
 

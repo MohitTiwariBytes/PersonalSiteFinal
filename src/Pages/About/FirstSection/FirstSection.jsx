@@ -47,6 +47,7 @@ export default function FirstSection() {
                 buttonHoverColor="white"
                 textColor="#fff"
                 textHoverColor="black"
+                onClick={()=>{window.location.replace("/contact")}}
               />
 
               <span id="adiadnc">Skills</span>

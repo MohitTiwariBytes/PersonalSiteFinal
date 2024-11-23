@@ -79,6 +79,13 @@ z {
   }
 }
 
+@media (max-width: 1080px) {
+  .marquee {
+    top: 394px;
+    right: -326px;
+  }
+}
+
 @media (max-width: 842px) {
   .marquee {
     top: 300px;

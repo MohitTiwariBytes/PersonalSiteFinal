@@ -3,7 +3,7 @@ import "./SecondSection.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import foodzyLogo from "../../../assets/Images/foodzyLogo-BZPrcbGz.png";
-import hackClubFinder from "../../../assets/Images/icon-rounded.svg";
+import hackClubFinder from "../../../assets/Images/icon-square.png";
 import astrohacksLogo from "../../../assets/Images/astrohacksHeadLogo.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -96,7 +96,7 @@ const SecondSection = () => {
         </div>
         <div className="projects">
           <div className="project">
-            <img src={foodzyLogo} alt="" />
+            <img style={{objectFit: "cover"}} src={foodzyLogo} alt="" />
             <div className="wagera">
               <span>Foodzy</span>
               <div className="icons">
@@ -138,7 +138,7 @@ const SecondSection = () => {
             </div>
           </div>
           <div className="project">
-            <img src={hackClubFinder} alt="" />
+            <img style={{objectFit: "cover"}} src={hackClubFinder} alt="" />
             <div className="wagera">
               <span>Hack Club Finder</span>
               <div className="icons">

@@ -76,8 +76,8 @@ const Navbar = () => {
       { y: "0px" },
       {
         y: "-20px",
-        stagger: 0.1,
-        duration: 0.6,
+        stagger: 0.08,
+        duration: 0.3,
         ease: "power3.out",
       }
     );
@@ -87,8 +87,8 @@ const Navbar = () => {
       { y: "0px" },
       {
         y: "-15px",
-        stagger: 0.1,
-        duration: 0.6,
+        stagger: 0.08,
+        duration: 0.3,
         ease: "power3.out",
       }
     );
@@ -104,8 +104,8 @@ const Navbar = () => {
       { y: "-15px" },
       {
         y: "0px",
-        stagger: 0.1,
-        duration: 0.6,
+        stagger: 0.08,
+        duration: 0.3,
         ease: "power3.out",
       }
     );
@@ -115,8 +115,8 @@ const Navbar = () => {
       { y: "-15px" },
       {
         y: "20px",
-        stagger: 0.1,
-        duration: 0.6,
+        stagger: 0.08,
+        duration: 0.3,
         ease: "power3.out",
       }
     );

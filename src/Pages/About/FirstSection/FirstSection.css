@@ -19,6 +19,8 @@
   justify-content: center;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+  z-index: 23;
 }
 
 .topLeftAbout h1 {
@@ -40,7 +42,7 @@
   overflow: hidden;
 }
 
-.topLeftAbout span {
+#afduad {
   font-family: "Satoshi";
   font-size: 15px;
   font-weight: 500;
@@ -72,6 +74,11 @@
   width: 500px;
   height: 600px;
   object-fit: cover;
+}
+
+#adiadnc{
+  color: black;
+  font-family: "Satoshi";
 }
 
 .asdadasdnx {

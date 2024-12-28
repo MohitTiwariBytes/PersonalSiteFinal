@@ -34,7 +34,7 @@ export default function FirstSection() {
             <div className="asdadasdnx">
               <h1>About me.</h1>
 
-              <span>
+              <span id="afduad">
                 Hi! I am Mohit Tiwari, a 13 year old teenager from India, I
                 started my coding journey when i was 10, When i turned 11, I
                 learned how to create a site, I started digging deeper onto it
@@ -47,7 +47,7 @@ export default function FirstSection() {
                 buttonHoverColor="white"
                 textColor="#fff"
                 textHoverColor="black"
-                onClick={()=>{window.location.replace("/contact")}}
+                to="/contact"
               />
 
               <span id="adiadnc">Skills</span>

@@ -66,7 +66,7 @@ export default function Footer() {
     );
   }, []);
 
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   return (
     <div className="footerMain">
@@ -83,9 +83,7 @@ export default function Footer() {
               buttonColor="white"
               buttonHoverColor="gray"
               textColor="black"
-              onClick={() => {
-                window.location.replace("/contact");
-              }}
+              to="/contact"
             />
           </div>
           <div className="rightFooter">

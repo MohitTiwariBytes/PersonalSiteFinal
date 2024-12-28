@@ -1,94 +1,93 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./Button.css";
-import gsap from "gsap";
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import "./Button.css"
 
-const Button = ({
-  text,
-  onClick,
-  buttonColor = "#000", // Default button color
-  buttonHoverColor = "#555", // Default button hover color
-  textColor = "#fff", // Default text color
-  textHoverColor = "#fff", // Default text hover color
-}) => {
-  const buttonRef = useRef(null); // Reference to the button
-  const squareRef = useRef(null); // Reference to the square
-  const [currentTextColor, setCurrentTextColor] = useState(textColor); // State for text color
+// eslint-disable-next-line react/prop-types
+const AnimatedButton = ({ text = 'Button', to = '#' }) => {
+  const buttonRef = useRef(null);
+  const flairRef = useRef(null);
+  const xSetRef = useRef(null);
+  const ySetRef = useRef(null);
 
-  // Handle mouse move to position the square exactly at mouse coordinates
-  const handleMouseMove = (event) => {
-    const buttonRect = buttonRef.current.getBoundingClientRect();
-    const mouseX = event.clientX - buttonRect.left - 65;
-    const mouseY = event.clientY - buttonRect.top - 14;
-
-    // Set the position of the square to the exact mouse position
-    gsap.to(squareRef.current, {
-      x: mouseX, // Center square at mouse
-      y: mouseY,
-      duration: 0.1, // Smooth animation for following the mouse
-      ease: "none", // Direct, no easing to follow the mouse precisely
-    });
-  };
-
-  // Handle mouse enter: expand the square and change text color
-  const handleMouseEnter = () => {
-    gsap.to(squareRef.current, {
-      height: "300px",
-      width: "300px",
-      duration: 0.6,
-      ease: "power2.out",
-    });
-
-    setCurrentTextColor(textHoverColor); // Change text color on hover
-  };
-
-  // Handle mouse leave: shrink the square back to its initial size and reset text color
-  const handleMouseLeave = () => {
-    gsap.to(squareRef.current, {
-      height: "0px",
-      width: "0px",
-      duration: 0.3,
-      ease: "power2.out",
-    });
-
-    setCurrentTextColor(textColor); // Reset text color when mouse leaves
-  };
-
-  // Add event listeners for mouse move and hover
   useEffect(() => {
-    const buttonElement = buttonRef.current;
+    if (!buttonRef.current || !flairRef.current) return;
 
-    buttonElement.addEventListener("mousemove", handleMouseMove);
-    buttonElement.addEventListener("mouseenter", handleMouseEnter);
-    buttonElement.addEventListener("mouseleave", handleMouseLeave);
+    // Initialize GSAP quickSetters
+    xSetRef.current = gsap.quickSetter(flairRef.current, "xPercent");
+    ySetRef.current = gsap.quickSetter(flairRef.current, "yPercent");
 
-    // Cleanup event listeners when the component is unmounted
+    const getXY = (e) => {
+      const { left, top, width, height } = buttonRef.current.getBoundingClientRect();
+
+      const xTransformer = gsap.utils.pipe(
+        gsap.utils.mapRange(0, width, 0, 100),
+        gsap.utils.clamp(0, 100)
+      );
+
+      const yTransformer = gsap.utils.pipe(
+        gsap.utils.mapRange(0, height, 0, 100),
+        gsap.utils.clamp(0, 100)
+      );
+
+      return {
+        x: xTransformer(e.clientX - left),
+        y: yTransformer(e.clientY - top)
+      };
+    };
+
+    const handleMouseEnter = (e) => {
+      const { x, y } = getXY(e);
+      xSetRef.current(x);
+      ySetRef.current(y);
+      gsap.to(flairRef.current, {
+        scale: 1,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+    };
+
+    const handleMouseLeave = (e) => {
+      const { x, y } = getXY(e);
+      gsap.killTweensOf(flairRef.current);
+      gsap.to(flairRef.current, {
+        xPercent: x > 90 ? x + 20 : x < 10 ? x - 20 : x,
+        yPercent: y > 90 ? y + 20 : y < 10 ? y - 20 : y,
+        scale: 0,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    };
+
+    const handleMouseMove = (e) => {
+      const { x, y } = getXY(e);
+      gsap.to(flairRef.current, {
+        xPercent: x,
+        yPercent: y,
+        duration: 0.4,
+        ease: "power2"
+      });
+    };
+
+    const button = buttonRef.current;
+    button.addEventListener("mouseenter", handleMouseEnter);
+    button.addEventListener("mouseleave", handleMouseLeave);
+    button.addEventListener("mousemove", handleMouseMove);
+
     return () => {
-      buttonElement.removeEventListener("mousemove", handleMouseMove);
-      buttonElement.removeEventListener("mouseenter", handleMouseEnter);
-      buttonElement.removeEventListener("mouseleave", handleMouseLeave);
+      button.removeEventListener("mouseenter", handleMouseEnter);
+      button.removeEventListener("mouseleave", handleMouseLeave);
+      button.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
-    <button
-      ref={buttonRef}
-      className="button"
-      onClick={onClick}
-      style={{
-        backgroundColor: buttonColor,
-        color: currentTextColor, // Apply the dynamic text color here
-      }}
-    >
-      <div
-        ref={squareRef}
-        className="squareSmallInner"
-        style={{
-          backgroundColor: buttonHoverColor, // Square's hover color
-        }}
-      ></div>
-      {text}
-    </button>
+    <a ref={buttonRef} href={to} className="button button--stroke">
+      <span ref={flairRef} className="button__flair"></span>
+      <span className="button__label">
+        {text}
+      </span>
+    </a>
   );
 };
 
-export default Button;
+export default AnimatedButton;

@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./ThirdSection.css";
@@ -8,27 +8,16 @@ import Button from "../../../Components/ButtonAnimated/Button";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ThirdSection() {
+  const paragraphsRef = useRef([]);
+  const imageRef = useRef(null);
+
   useEffect(() => {
-    const paragraphs = document.querySelectorAll(".about p");
+    // Safely select references
+    const paragraphs = paragraphsRef.current;
 
-    gsap.fromTo(
-      "#imaads",
-      {
-        objectPosition: "0px -23px",
-      },
-      {
-        objectPosition: "0px -120px",
-        ease: "power3.inOut",
-        duration: 0.7,
-        scrollTrigger: {
-          trigger: ".thirdSection",
-          start: "top 80%", // This defines the endpoint for the animation
-          scrub: true, // Allows the animation to be smooth with scroll
-        },
-      }
-    );
 
-    paragraphs.forEach((paragraph) => {
+    // Paragraphs animation
+    const paragraphAnimations = paragraphs.map((paragraph) =>
       gsap.fromTo(
         paragraph,
         { y: 20, opacity: 0 },
@@ -44,24 +33,15 @@ export default function ThirdSection() {
             toggleActions: "play none none reverse",
           },
         }
-      );
-    });
-
-    gsap.fromTo(
-      ".button",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 0.5,
-        ease: "power2.out",
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: ".button ",
-          start: "top 70%",
-          toggleActions: "play none none reverse",
-        },
-      }
+      )
     );
+
+
+    // Cleanup function
+    return () => {
+      paragraphAnimations.forEach(anim => anim.kill());
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   }, []);
 
   return (
@@ -69,25 +49,17 @@ export default function ThirdSection() {
       <div className="thirdSection">
         <div className="about">
           <div className="left1">
-            <span>
-              <p>I</p>
-              <p> am</p>
-              <p> just</p>
-              <p> a</p>
-              <p> teenager</p>
-              <p> who</p>
-              <p> is</p>
-              <p> interested</p>
-              <p> in</p>
-              <p> developing</p>
-              <p> and</p>
-              <p> designing</p>
-              <p> amazing</p>
-              <p> sites.</p>
-              <p> Nothing</p>
-              <p> More.</p>
-              <p> Nothing</p>
-              <p> Less.</p>
+            <span id="sadad">
+              {["I", "am", "just", "a", "teenager", "who", "is", "interested",
+                "in", "developing", "and", "designing", "amazing", "sites",
+                "Nothing", "More.", "Nothing", "Less."].map((word, index) => (
+                  <p
+                    key={index}
+                    ref={el => paragraphsRef.current[index] = el}
+                  >
+                    {word}
+                  </p>
+                ))}
             </span>
             <Button
               text="About Me?"
@@ -95,13 +67,18 @@ export default function ThirdSection() {
               buttonHoverColor="white"
               textColor="#fff"
               textHoverColor="black"
-              onClick={() => {
-                window.location.replace("/about");
-              }}
+              to={"/about"}
             />
           </div>
           <div className="image">
-            <img id="imaads" src={myImage} alt="" />
+            <div className="asdais">
+              <img
+                id="imaads"
+                ref={imageRef}
+                src={myImage}
+                alt="Profile"
+              />
+            </div>
           </div>
         </div>
       </div>

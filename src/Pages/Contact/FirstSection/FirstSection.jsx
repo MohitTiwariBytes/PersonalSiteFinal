@@ -145,7 +145,7 @@ export default function FirstSection() {
         <div className="aixms">
           <a href="mailto:mohittiwariis97@gmail.com">| Email</a>
           <a href="https://www.instagram.com/codedbymohit/">| Instagram</a>
-          <a href="https://www.youtube.com/@---CodeWithMohit">| Youtube</a>
+          <a href="https://www.youtube.com/@codedbymohit">| Youtube</a>
         </div>
       </div>
     </div>

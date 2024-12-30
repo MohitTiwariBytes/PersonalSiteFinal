@@ -9,6 +9,7 @@ body,
 
 body{
   overflow-x: hidden;
+  background-color: white;
 }
 
 * {
@@ -26,6 +27,12 @@ body{
 @font-face {
   font-family: "Aeonik";
   src: url("./assets/Fonts/Aeonik.otf");
+
+  font-weight: 1 1000;
+}
+@font-face {
+  font-family: "Monique";
+  src: url("./assets/Fonts/monique.otf");
 
   font-weight: 1 1000;
 }

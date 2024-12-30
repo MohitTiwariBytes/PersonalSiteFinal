@@ -2,6 +2,8 @@ import "./Navbar.css";
 import gsap from "gsap";
 import { React, useEffect, useState } from "react";
 import Scramble from "../ScrambleText/Scramble";
+import CustomEase from "gsap/CustomEase";
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +14,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+
+    CustomEase.create("osmo-ease", "0.625, 0.05, 0, 1")
+
     if (isOpen) {
       gsap.fromTo(
         ".ham-menu",
@@ -32,7 +37,7 @@ const Navbar = () => {
                 y: 0,
                 stagger: 0.1,
                 duration: 0.6,
-                ease: "power3.inOut",
+                ease: "osmo-ease",
               }
             );
           }, // Trigger scramble when animation completes
@@ -47,7 +52,7 @@ const Navbar = () => {
         {
           y: 100,
           duration: 0.3,
-          ease: "power3.inOut",
+          ease: "osmo-ease",
           onComplete: () => {
             gsap.fromTo(
               ".ham-menu",

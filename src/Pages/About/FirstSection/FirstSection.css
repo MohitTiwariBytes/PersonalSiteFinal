@@ -12,6 +12,10 @@
   position: relative;
 }
 
+.asdas button{
+  width: 100px;
+}
+
 .topLeftAbout {
   width: 100%;
   height: 100%;
@@ -89,13 +93,13 @@
 }
 
 @media (max-width: 1004px) {
-  .topLeftAbout span {
+  #afduad {
     width: 80%;
   }
 }
 
 @media (max-width: 604px) {
-  .topLeftAbout span {
+  #afduad {
     width: 100%;
   }
 }

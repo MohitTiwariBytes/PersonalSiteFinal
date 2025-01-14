@@ -15,7 +15,7 @@
   justify-content: space-between;
 }
 
-#sadad{
+#sadad {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -39,24 +39,20 @@
   justify-content: space-between;
   align-items: center;
 }
-.image {
+
+.asdais {
+  position: relative;
   height: 400px;
-  width: 400px;
-  position: relative; /* Acts as the reference point */
-  overflow: hidden; /* Ensures the image doesn't escape the container */
+  width: 300px;
+  overflow: hidden;
 }
 
-
-.image img {
-  position: absolute; /* Locks the image in place relative to .image */
-  top: 0; /* Aligns to the top of the .image div */
-  left: 50%; /* Centers the image horizontally */
-  transform: translateX(-50%); /* Adjusts for centering */
-  height: 100%; /* Ensures full coverage of the container */
-  width: auto; /* Maintains aspect ratio */
-  object-fit: cover; /* Ensures the image covers the area */
+.asdais-inner {
+  background-image: url("../../../assets/Images/IMG_1098.jpg");
+  background-size: 300px;
+  width: 300px;
+  height: 400px;
 }
-
 
 @media (max-width: 1200px) {
   .image {
@@ -75,7 +71,7 @@
 }
 
 @media (max-width: 544px) {
- #sadad {
+  #sadad {
     font-size: 18px;
   }
 }

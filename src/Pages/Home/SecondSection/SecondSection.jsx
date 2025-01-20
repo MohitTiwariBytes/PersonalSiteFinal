@@ -102,7 +102,7 @@ const SecondSection = () => {
               <div className="icons">
                 <svg
                   onClick={() => {
-                    window.location.replace("https://food-zy.netlify.app");
+                    window.location.replace("https://foodzy.mohittiwaridev.xyz/");
                   }}
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -145,7 +145,7 @@ const SecondSection = () => {
                 <svg
                   onClick={() => {
                     window.location.replace(
-                      "https://indian-hackclubs.netlify.app"
+                      "https://hcfinder.mohittiwaridev.xyz/"
                     );
                   }}
                   xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +189,7 @@ const SecondSection = () => {
                 <svg
                   onClick={() => {
                     window.location.replace(
-                      "https://astrohacks1234.netlify.app"
+                      "https://astrohacks.mohittiwaridev.xyz/"
                     );
                   }}
                   xmlns="http://www.w3.org/2000/svg"
